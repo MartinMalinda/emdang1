@@ -9,4 +9,4 @@
 </ul>
 
 
-<a href="https://github.com/green-fox-academy/chama-retros-syllabus">Stage</a>
+<a href="https://github.com/green-fox-academy/chama-retros-syllabus">Class Syllabus</a>
