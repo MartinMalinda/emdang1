@@ -7,3 +7,6 @@
   <li><a href="https://github.com/emdang1/patchwork">patchwork</a></li>
   <li><a href="https://github.com/emdang1/hello-world">hello world</a></li>
 </ul>
+
+
+<a href="https://github.com/green-fox-academy/chama-retros-syllabus">Stage</a>
