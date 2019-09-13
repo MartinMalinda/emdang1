@@ -10,26 +10,43 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Type the an integer number: ");
+            // Write a program that reads a number from the standard input, then draws a
+            // triangle like this:
+            //
+            // *
+            // **
+            // ***
+            // ****
+            //
+            // The triangle should have as many lines as the number was
+
+            Console.WriteLine("Type your number: ");
             int num = int.Parse(Console.ReadLine());
+            //int numRow = numHeight;
 
-            if (num <= 0)
+            Console.WriteLine();        //separator
+            //int a = 1;
+            
+            for (int i = 1; i <= num; i++)
             {
-                Console.WriteLine("Not enough");
-            } else if (num == 1){
-                Console.WriteLine("ONE");
-            } else if (num == 2){
-              Console.WriteLine("TWO");
+                while (i<=num)
+                {
+                    Console.WriteLine("*");
+                }
+                ++i;
+              
             }
-            else Console.WriteLine("A lot");
-            Console.ReadLine();
+            
 
-            // Write a program that reads a number from the standard input,
-            // If the number is zero or smaller it should print: Not enough
-            // If the number is one it should print: One
-            // If the number is two it should print: Two
-            // If the number is more than two it should print: A lot
+            /*
+            while (a <= num)
+            {
+                Console.Write("*");
+                ++a;
+            }
+            */
+
+            Console.ReadLine();
         }
     }
 }
-
