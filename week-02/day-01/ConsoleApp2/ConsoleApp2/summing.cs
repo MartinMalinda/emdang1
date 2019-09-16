@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,21 +15,22 @@ namespace ConsoleApp2
             Console.Write("Please write the end-number: ");
             int endNumber = int.Parse(Console.ReadLine());
             Console.Write("The sum of the number from 0 to your end number is: ");
-            Console.Write(factorial(endNumber));
+            Console.Write(sum(endNumber));
 
             Console.ReadKey();
         }
 
-        public static int factorial(int x)
+        public static int sum(int x)
         {
-            int result = 1;
-            for (int i = 1; i <=x; i++)
+            int result = 0;
+            for (int i = 0; i <=x; i++)
             {
-                result = result * i;
+                result = result + i;
             }
             return result;
         }
 
     }
 }
+
 
