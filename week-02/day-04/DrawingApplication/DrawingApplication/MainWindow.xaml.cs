@@ -10,7 +10,7 @@ namespace DrawingApplication
 {
     public class MainWindow : Window
     {
-        
+
         public MainWindow()
         {
             InitializeComponent();          // začátek nevim? 
@@ -24,24 +24,56 @@ namespace DrawingApplication
             double canvasHeight = canvas.Height = 600;         //zadefinování canvasu, protože to je jinak nekonečno
                                                                //foxDraw.SetBackgroundColor(Colors.Black);
 
-            foxDraw.SetBackgroundColor(Colors.Black);
+            foxDraw.SetStrokeColor(Colors.Black);
             /*----------------------------------------------------------------------------------------------------------*/
             //Line play 
-            int a = 0;
-            for (int i = 0; i <15; i++)
+            int strana = 80;
+            int prurez = strana*2;
+
+
+            foxDraw.DrawLine(300, 0, 300, 600);         // ref osa
+            foxDraw.DrawLine(0, 300, 600, 300);         // ref osa
+
+
+            foxDraw.SetStrokeColor(Colors.Red);
+            foxDraw.DrawLine(260, 600, 340, 600);         // spodní 
+
+            for (int i = 0; i < 4; i++)
+            {
+                foxDraw.SetStrokeColor(Colors.Red);
+                foxDraw.DrawLine(260, 600, 340, 600);         // spodní
+            }
+
+            /* 
+            for (int i = 0; i <20; i++)
             {
                 foxDraw.SetStrokeColor(Colors.Purple);
-                foxDraw.DrawLine(300, a, 300+a, 300);
-                a += 20;
+                foxDraw.DrawLine(a, 600, 300+b, a);
 
+                foxDraw.SetStrokeColor(Colors.Cyan);
+                foxDraw.DrawLine(600-a, 600, 300 -b, a);
+
+                foxDraw.SetStrokeColor(Colors.Yellow);
+                foxDraw.DrawLine(b, 600-a, 600-b, 600-a);
+
+
+                
                 foxDraw.SetStrokeColor(Colors.Cyan);
                 foxDraw.DrawLine(300, a, 300 - a, 300);
 
+                foxDraw.SetStrokeColor(Colors.Yellow);
+                foxDraw.DrawLine(300, 600-a, 300-a, 300);
 
+                foxDraw.SetStrokeColor(Colors.LightPink);
+                foxDraw.DrawLine(300, 600-a, 300+a, 300);
+                
+                a += 30;
+                b += 15;
+                
+                foxDraw.DrawLine()
+                
 
-                //foxDraw.SetStrokeColor(Colors.LawnGreen);
-                //foxDraw.DrawLine(0, i, i, Width);
-            }
+            }*/
 
 
         }
