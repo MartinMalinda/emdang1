@@ -40,13 +40,12 @@ namespace ConsoleApp1
 
             foreach (var item in telephoneBook)
             {
-                if (item.Key != "Chris E.Myer")
+                if (item.Key == "Chris E.Myer")
                 {
-                Console.WriteLine("NO we dont have it");
-
+                    Console.WriteLine("YES, the number of Chris is: " + item.Value);
+                    break;
                 }
-                else
-                Console.WriteLine("YES, the number of Chris is: " + item.Value);
+                
             }
 
 
