@@ -20,7 +20,10 @@ namespace ConsoleApp1
 
         public BlogPost(string AuthorName, string Title, string Text, string PublicationDate)
         {
-
+            this.AuthorName = AuthorName;
+            this.Title = Title;
+            this.Text = Text;
+            this.PublicationDate = PublicationDate;
         }
 
     }
