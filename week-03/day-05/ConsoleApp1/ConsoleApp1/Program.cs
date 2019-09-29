@@ -21,13 +21,21 @@ namespace ConsoleApp1
 
         public static int BunnyEars(int amountOfBunnies)
         {
-           if (amountOfBunnies == 1)
+            if (amountOfBunnies == 0)
+            {
+                return 0;
+            }
+           else if(amountOfBunnies == 1)
             {
                 return 2;
             }
-            else
+           else if (amountOfBunnies % 2 != 0)
             {
                 return 2 + BunnyEars(amountOfBunnies - 1);
+            }
+            else
+            {
+                return 3 + BunnyEars(amountOfBunnies - 1);
             }
             
         }   
