@@ -31,12 +31,12 @@ namespace ConsoleApp1
 
         public override void GetGoal()
         {
-            Console.WriteLine("Educate brilliant junior software developers.");
+            Console.WriteLine("My goal is: Educate brilliant junior software developers.");
         }
 
         public override void Introduce()
         {
-            Console.WriteLine("Hi, I'm " + this.Name + ", a " + this.Age + " year old " + this.Gender + this.Level +" mentor");
+            Console.WriteLine("Hi, I'm " + this.Name + ", a " + this.Age + " year old " + this.Gender + " " + this.Level +" mentor.");
         }
     }
 }

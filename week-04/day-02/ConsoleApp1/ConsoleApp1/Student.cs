@@ -9,7 +9,7 @@ namespace ConsoleApp1
     class Student : Person
     {
         private string previousOrganization;
-        private int skippedDays = 0;
+        private int skippedDays;
 
         public string PreviousOrganization { get; set; }
         public int SkippedDays { get; set; }
@@ -17,17 +17,19 @@ namespace ConsoleApp1
         public Student() : base()
         {
             PreviousOrganization = "The School Of Life";
+            SkippedDays = 0;
         }
 
         public Student(string name, int age, GenderType gender, string previousOrganization) : base(name, age, gender)
         {
             
             PreviousOrganization = previousOrganization;
+            SkippedDays = 0;
         }
 
         public override void GetGoal()
         {
-            Console.WriteLine("Be a junior software developer");
+            Console.WriteLine("My goal is: Be a junior software developer");
         }
 
         public override void Introduce()
