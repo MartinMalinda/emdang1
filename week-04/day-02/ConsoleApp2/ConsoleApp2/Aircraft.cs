@@ -12,20 +12,50 @@ namespace ConsoleApp2
         public int BaseDamage { get; protected set; }
         public int Ammo { get; protected set; } = 0;
 
-        public Aircraft(int ammo)
+        public bool FillPriority { get; protected set; } 
+
+        public AircraftType Type { get; protected set; }
+
+        public enum AircraftType
         {
-            Ammo = ammo;
+            F16, 
+            F35
         }
 
-        //public Aircraft(int maxAmmo, int baseDamage)
-        //{
-        //    MaxAmmo = maxAmmo;
-        //    BaseDamage = baseDamage;
-        //}
-
-        public void fight()
+        public Aircraft()
         {
+            
+        }
 
+        public void Fight()
+        {
+            int finalDamage = Ammo * BaseDamage;
+            Console.WriteLine("The Final damage was: " + finalDamage);
+            Ammo = 0;
+        }
+
+        public int Refill(int refillAmmo)
+        {
+            Ammo = Ammo + (MaxAmmo - Ammo);
+            refillAmmo = refillAmmo - (MaxAmmo - Ammo);
+            return refillAmmo;
+        }
+
+        
+        public string GiveType()
+        {
+            string result = Type.ToString();
+            return result;
+        }
+
+        public void GetStatus()
+        {
+            Console.WriteLine("Type: " + Type + ", Ammo: " + Ammo + ", Base Damage: " + BaseDamage + ", All Damage: " + (Ammo * BaseDamage));
+        }
+
+        public bool IsPriority()
+        {
+            return FillPriority;
         }
     }
 }

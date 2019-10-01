@@ -8,19 +8,12 @@ namespace ConsoleApp2
 {
     class F35 : Aircraft
     {
-        public F35(int ammo) : base(ammo)
+        public F35()
         {
             MaxAmmo = 12;
             BaseDamage = 50;
-
-            if (ammo > 0 && ammo <= MaxAmmo)
-            {
-                Ammo = ammo;
-            }
-            else
-            {
-                Console.WriteLine("The F16 can hold only " + MaxAmmo + "ammo");
-            }
+            Type = AircraftType.F35;
+            FillPriority = true;
         }
 
     }
