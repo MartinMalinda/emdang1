@@ -15,5 +15,9 @@ namespace ConsoleApp1
 
         }
 
+        public void FillShip()
+        {
+
+        }
     }
 }
