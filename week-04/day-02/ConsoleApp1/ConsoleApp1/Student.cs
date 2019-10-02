@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp1
-{
-    class Student : Person
+{   
+    // added the IClonable interface
+    class Student : Person, ICloneable
     {
         private string previousOrganization;
         private int skippedDays;
