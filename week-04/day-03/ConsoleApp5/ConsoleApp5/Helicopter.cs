@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp5
 {
-    class Helicopter
+    class Helicopter : Vehicle, IFlyable
     {
+        public void Fly()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Land()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TakeOff()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
