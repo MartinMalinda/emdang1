@@ -23,7 +23,7 @@ namespace SymetricMatrix
         public static bool IsSymetric(int[,] inputMatrix)
         {
           
-            for (int i = 0; i < inputMatrix.GetLength(0)-1; i++)
+            for (int i = 0; i < inputMatrix.GetLength(0)-1; i++)        // -1 due to the index bounds
             {
                 if (inputMatrix[i, (i + 1)] != inputMatrix[(i + 1), i])
                 {
