@@ -34,7 +34,7 @@ namespace GardenApp
             int plantsToBeWatered = 0;
             foreach (var item in plants)
             {
-                if((item is Flower) && item.CurrentWaterLevel < 5)
+                if ((item is Flower) && item.CurrentWaterLevel < 5)
                 {
                     plantsToBeWatered++;
                     item.SetNeedsWater(true);
@@ -50,7 +50,7 @@ namespace GardenApp
 
             foreach (var item in plants)
             {
-                if(item is Flower && item.NeedsWater == true)
+                if (item is Flower && item.NeedsWater == true)
                 {
                     item.SetCurrentWaterLevel(oneWatering);
                 }

@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace GardenApp
 {
-    class Plant
+    abstract class Plant
     {
-        
+
         public string Color { get; protected set; }
         public int WaterAmount { get; protected set; }
         public double WaterAbsorbtion { get; protected set; }
-        public double CurrentWaterLevel { get;  protected set; } = 0;
+        public double CurrentWaterLevel { get; protected set; } = 0;
 
-        public bool NeedsWater { get;  protected set; } = false;
+        public bool NeedsWater { get; protected set; } = false;
 
-        
+
 
         public void SetNeedsWater(bool status)
         {
@@ -29,11 +29,11 @@ namespace GardenApp
 
         public string NeedsWaterStringStatus()
         {
-            if(this is Flower && this.CurrentWaterLevel < 5)
+            if (this is Flower && this.CurrentWaterLevel < 5)
             {
                 return "needs water";
             }
-            if(this is Tree && this.CurrentWaterLevel < 10)
+            if (this is Tree && this.CurrentWaterLevel < 10)
             {
                 return "needs water";
             }

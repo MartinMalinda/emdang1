@@ -8,7 +8,7 @@ namespace GardenApp
 {
     class Tree : Plant
     {
-        public Tree(string color)
+        public Tree(string color) 
         {
             Color = color;
             WaterAbsorbtion = 0.40;

@@ -19,11 +19,11 @@ namespace GardenApp
             garden.ShowGarden();
             garden.WaterPlants(40);
             garden.WaterPlants(70);
-            
+
 
             Console.ReadLine();
         }
 
-        
+
     }
 }

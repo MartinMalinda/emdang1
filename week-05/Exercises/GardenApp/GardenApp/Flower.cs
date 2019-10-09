@@ -22,7 +22,7 @@ namespace GardenApp
 
         public override void SetCurrentWaterLevel(int water)
         {
-            CurrentWaterLevel += (water*WaterAbsorbtion);
+            CurrentWaterLevel += (water * WaterAbsorbtion);
         }
     }
 }
