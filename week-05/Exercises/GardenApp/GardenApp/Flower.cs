@@ -11,12 +11,18 @@ namespace GardenApp
         public Flower(string color)
         {
             Color = color;
+            WaterAbsorbtion = 0.75;
         }
 
 
         public override string ToString()
         {
             return "Flower";
+        }
+
+        public override void SetCurrentWaterLevel(int water)
+        {
+            CurrentWaterLevel += (water*WaterAbsorbtion);
         }
     }
 }

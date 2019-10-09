@@ -11,11 +11,18 @@ namespace GardenApp
         public Tree(string color)
         {
             Color = color;
+            WaterAbsorbtion = 0.40;
+
         }
 
         public override string ToString()
         {
             return "Tree";
+        }
+
+        public override void SetCurrentWaterLevel(int water)
+        {
+            CurrentWaterLevel += (water * WaterAbsorbtion);
         }
     }
 }

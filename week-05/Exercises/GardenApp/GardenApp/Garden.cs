@@ -24,7 +24,7 @@ namespace GardenApp
         {
             foreach (var item in plants)
             {
-                Console.WriteLine($"The {item.Color} {item.ToString()} > currentWaterLevel: {item.CurrentWaterLevel}.");
+                Console.WriteLine($"The {item.Color} {item.ToString()} {item.NeedsWaterStringStatus()} [{item.CurrentWaterLevel}].");
             }
             Console.WriteLine();
         }
@@ -37,12 +37,12 @@ namespace GardenApp
                 if((item is Flower) && item.CurrentWaterLevel < 5)
                 {
                     plantsToBeWatered++;
-                    item.NeedsWater = true;
+                    item.SetNeedsWater(true);
                 }
                 if ((item is Tree) && item.CurrentWaterLevel < 10)
                 {
                     plantsToBeWatered++;
-                    item.NeedsWater = true;
+                    item.SetNeedsWater(true);
                 }
             }
 
@@ -50,15 +50,16 @@ namespace GardenApp
 
             foreach (var item in plants)
             {
-                if(item.NeedsWater == true)
+                if(item is Flower && item.NeedsWater == true)
                 {
-                    item.CurrentWaterLevel += oneWatering;
+                    item.SetCurrentWaterLevel(oneWatering);
+                }
+                if (item is Tree && item.NeedsWater == true)
+                {
+                    item.SetCurrentWaterLevel(oneWatering);
                 }
             }
-
             this.ShowGarden();
-
-            Console.WriteLine();
         }
     }
 
