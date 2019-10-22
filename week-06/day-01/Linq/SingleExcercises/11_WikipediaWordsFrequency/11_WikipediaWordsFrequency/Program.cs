@@ -14,20 +14,24 @@ namespace _11_WikipediaWordsFrequency
             string path = "./textFile.txt";
 
             string allText = File.ReadAllText(path).ToLower();
-            for (int i = 0; i < allText.Length; i++)
-            {
-                if((allText[i] > 122 || allText[i] < 97 ) && allText[i] != 32)
-                {
-                    allText = allText.Remove(i, 1);
-                    i--;
-                    //allText = allText.Replace(allText[i], ' ');
+            char[] separators = { ' ', '\r', '\n' };
+            var splittedText = allText.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+            splittedText.Where(w => w.All(c => ))
 
-                }
-            }
-            char[] separators = { ' ', '\r', '\n'};
-            string[] wordArr = allText.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+            //for (int i = 0; i < allText.Length; i++)
+            //{
+            //    if((allText[i] > 122 || allText[i] < 97 ) && allText[i] != 32)
+            //    {
+            //        allText = allText.Remove(i, 1);
+            //        i--;
+            //        //allText = allText.Replace(allText[i], ' ');
 
-            Console.WriteLine();
+            //    }
+            //}
+            //char[] separators = { ' ', '\r', '\n'};
+            //string[] wordArr = allText.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+
+            //Console.WriteLine();
             Console.ReadLine();
         }
     }
