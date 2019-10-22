@@ -20,11 +20,13 @@ namespace WebApplication1.Controllers
 
         [HttpGet]
         [Route("greeting")]
-        public Greeting Greet()
+        public Greeting Greet(string name)
         {
+            int i = 1;
             var greeting = new Greeting();
             greeting.Id = 1;
             greeting.Content = "Hello World";
+            greeting.Name = name;
             return greeting;
         }
     }
