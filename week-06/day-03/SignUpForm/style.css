@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: lightgrey;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    background: white;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    display:flex;
+    box-shadow: 1px 3px 5px #888888;
+
+}
+
+form{
+    background: white;
+    
+}
+.inputs {
+    display:flex;
+    flex-direction: column;  
+}
+
+.inputs input{
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    margin-bottom: 12px;
+}
+
+.inputs input:focus{
+    border-color:green;
+    outline:none;
+}
+
+.signUpButtons {
+    background: white;
+    display:flex;
+    flex-direction: column; 
+    justify-content: center;  
+    margin-top:50px;
+
+}
+
+.signUpButtons button{
+    padding: 10 20px;
+
+}
+
+button{
+    border-radius: 2px;
+    color: white;
+    border:none;
+    margin-bottom: 10px;
+    outline:none;
+}
+
+button#signup{
+    margin-top:10px;
+}
+
+.circle{
+    background: lightgrey;
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    box-shadow: 1px 3px 5px #888888;
+    margin: 0 20px;
+}
+
+.circle p{
+    font-size: 10px;
+    text-align:center;
+    
+}
+
+button#signup{
+    background: green;
+}
+
+button#fb{
+    background: blue;
+}
+
+button#twitter{
+    background: lightblue;
+}
+
+button#gplus{
+    background: red;
+}
