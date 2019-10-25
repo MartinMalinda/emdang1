@@ -17,7 +17,8 @@ namespace WebShop.Controllers
             new ShopItem("Wokin", "Chicken with fried rice", 119, 100),
             new ShopItem("T-shirt", "Blue with corgi on a bike", 300, 1),
             new ShopItem("T-shirt GUCCI", "Blue with corgi on a bike", 30000, 1),
-            new ShopItem("T-shirt NIKE", "Blue with corgi on a bike", 30000, 0)};
+            new ShopItem("T-shirt NIKE", "Blue with corgi on a bike", 30000, 0)
+        };
 
 
         [Route("")] //webshop
@@ -31,21 +32,21 @@ namespace WebShop.Controllers
         public IActionResult OnlyAvailable()
         {
             ViewBag.Items = shopItemsList.Where(si => si.QuantityOfStock > 0);
-            return View();
+            return View("Index");
         }
 
         [Route("cheapestfirst")]
         public IActionResult CheapestFirst()
         {
             ViewBag.Items = shopItemsList.OrderBy(si => si.Price);
-            return View();
+            return View("Index");
         }
 
         [Route("containsnike")]
         public IActionResult ContainsNike()
         {
             ViewBag.Items = shopItemsList.Where(si => si.Name.ToLower().Contains("nike")||si.Description.ToLower().Contains("nike"));
-            return View();
+            return View("Index");
         }
 
         [Route("averagestock")]
@@ -61,15 +62,15 @@ namespace WebShop.Controllers
         {
             ViewBag.Items = shopItemsList.Where(si => si.QuantityOfStock > 0).OrderByDescending(si => si.Price).Take(1);
 
-            return View();
+            return View("Index");
         }
 
         [HttpPost]
         [Route("search")]
         public IActionResult Search(string search)
         {
-            ViewData["keyword"] = search;
-            ViewBag.Items = shopItemsList.Where(si => si.QuantityOfStock > 0).OrderByDescending(si => si.Price).Take(1);
+            //ViewData["keyword"] = search;
+            ViewBag.Items = shopItemsList.Where(si => si.Name.ToLower().Contains(search) || si.Description.ToLower().Contains(search));
 
 
             return View();
