@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "HtmlRaw";
+    string text = "This is an<em> HTML </ em > text. < b > Enjoy yourself! </ b >";
+
+}
+
+<h2>HtmlRaw</h2>
+
+@Html.Raw("This is an<em> HTML </em> text. <b> Enjoy yourself! </b>")<br />
+@text
+
+

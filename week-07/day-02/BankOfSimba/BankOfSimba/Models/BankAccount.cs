@@ -10,13 +10,15 @@ namespace BankOfSimba.Models
         public string Name { get; set; }
         public double Balance { get; set; }
         public string AnimalType { get; set; }
+        public string Status { get; set; }
         public string Currency { get; set; } = "Zebra";
 
-        public BankAccount(string name, double balance, string animalType)
+        public BankAccount(string name, double balance, string animalType, string status)
         {
             Name = name;
             Balance = balance;
             AnimalType = animalType;
+            Status = status;
         }
     }
 }

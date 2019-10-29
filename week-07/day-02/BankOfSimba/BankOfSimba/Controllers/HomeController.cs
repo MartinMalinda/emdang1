@@ -20,8 +20,31 @@ namespace BankOfSimba.Controllers
         [Route("show")]
         public IActionResult Show()
         {
-            BankAccount ba = new BankAccount("Simba", 2000, "Lion");
+            BankAccount ba = new BankAccount("Simba", 2000, "Lion", "King");
             return View(ba);
+        }
+
+        [Route("htmlraw")]
+        public IActionResult HtmlRaw()
+        {
+            return View();
+        }
+
+        [Route("showall")]
+        public IActionResult ShowAll()
+        {
+            List<BankAccount> accountList = new List<BankAccount>()
+            {
+                    new BankAccount("Simba", 2000, "Lion", "King"),
+                    new BankAccount("Mufasa", 10000, "Lion", "King"),
+                    new BankAccount("Nala", 10000, "Lion", "Queen"),
+                    new BankAccount("Timon", 200, "Suricate", "Loser"),
+                    new BankAccount("Pumbaa", 100, "Pig", "Fat Pig"),
+            };
+
+            ViewBag.Accounts = accountList;
+           
+            return View();
         }
     }
 }
