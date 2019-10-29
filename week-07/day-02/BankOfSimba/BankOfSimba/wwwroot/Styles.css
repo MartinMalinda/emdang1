@@ -1,0 +1,10 @@
+﻿body {
+}
+
+th{
+    font-weight:bold;
+}
+
+table, td, th{
+    border: black solid 1px;
+}

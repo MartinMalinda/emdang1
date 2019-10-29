@@ -1,0 +1,28 @@
+﻿@model BankOfSimba.Models.BankAccount
+@{
+    ViewData["Title"] = "Show";
+}
+
+    <head>
+        <title>Show</title>
+        <link rel="stylesheet" href="~/styles.css" />
+    </head>
+
+    <h2>Show</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Balance</th>
+                <th>Animal Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Name</td>
+                <td>@string.Format("{0:0.00}", Model.Balance) @Model.Currency</td>
+                <td>@Model.AnimalType</td>
+            </tr>
+        </tbody
+    </table>
+
