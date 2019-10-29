@@ -27,6 +27,7 @@
         </tr>
     </thead>
     <tbody>
+        
 
         @foreach (var account in ViewBag.Accounts)
         {
@@ -34,21 +35,18 @@
                 <td>@account.Name</td>
                 <td>@string.Format("{0:0.00}", account.Balance) @account.Currency</td>
                 <td>@account.AnimalType</td>
-                @if(account.Status.ToLower() == "king")
+                @if (account.Status.ToLower() == "king")
                 {
                     <td class="shiny">@account.Status</td>
                 }
                 else
                 {
                     <td>@account.Status</td>
-
                 }
-
-
-
                 <td>@(index++)</td>
             </tr>
-            
+
         }
+
     </tbody>
 </table>

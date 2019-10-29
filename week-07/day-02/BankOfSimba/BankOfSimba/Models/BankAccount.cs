@@ -11,7 +11,7 @@ namespace BankOfSimba.Models
         public double Balance { get; set; }
         public string AnimalType { get; set; }
         public string Status { get; set; }
-        public string Currency { get; set; } = "Zebra";
+        public string Currency { get; set; } = "CZK";
 
         public BankAccount(string name, double balance, string animalType, string status)
         {
