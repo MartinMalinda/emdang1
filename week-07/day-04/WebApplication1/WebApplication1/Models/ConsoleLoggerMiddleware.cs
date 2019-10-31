@@ -8,6 +8,7 @@ namespace WebApplication1.Models
 {
     public class ConsoleLoggerMiddleware : IMiddleware
     {
+        //private Printer printer;
         private Printer printer;
 
         public ConsoleLoggerMiddleware(Printer printer)
@@ -19,6 +20,7 @@ namespace WebApplication1.Models
         {
             Console.WriteLine("Hi from the middleware");
             printer.Log("HELLOOOOO");
+            //color.PrintColor();
 
             return next(context);
         }

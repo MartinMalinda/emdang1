@@ -20,6 +20,9 @@ namespace WebApplication1
             services.AddTransient<ConsoleLoggerMiddleware>(); // interfaces needed??????????????
             services.AddTransient<Printer>();
 
+            services.AddTransient<IColor, RedColor>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,10 +38,9 @@ namespace WebApplication1
             app.UseMiddleware<ConsoleLoggerMiddleware>();
 
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+
+         
+
         }
     }
 }
