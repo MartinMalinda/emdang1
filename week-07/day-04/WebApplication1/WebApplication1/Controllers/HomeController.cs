@@ -37,5 +37,12 @@ namespace WebApplication1.Controllers
             return View((object)us.ValidateEmail(email));
         }
 
+        [HttpGet]
+        [Route("caesar")]
+        public IActionResult Caesar(string text, int number)
+        {
+            return View((object)us.Caesar(text, number));
+        }
+
     }
 }
