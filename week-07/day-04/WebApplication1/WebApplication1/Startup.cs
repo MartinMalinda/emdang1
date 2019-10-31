@@ -22,6 +22,8 @@ namespace WebApplication1
 
             services.AddTransient<IColor, RedColor>();
 
+            services.AddTransient<UtilityService>();
+
 
         }
 
