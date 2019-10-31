@@ -37,7 +37,7 @@ namespace WebApplication1
 
             
             app.UseMvc();
-            app.UseMiddleware<ConsoleLoggerMiddleware>();
+            //app.UseMiddleware<ConsoleLoggerMiddleware>();
 
 
 

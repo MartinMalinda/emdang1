@@ -30,5 +30,12 @@ namespace WebApplication1.Controllers
             // return View((object)us.RandomColor());
         }
 
+        [HttpGet]
+        [Route("email")]
+        public IActionResult EmailValidator(string email)
+        {
+            return View((object)us.ValidateEmail(email));
+        }
+
     }
 }

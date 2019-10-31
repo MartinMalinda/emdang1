@@ -28,5 +28,20 @@ namespace WebApplication1.Models
         {
             return colors[random.Next(colors.Count)];
         }
+
+        public List<string> ValidateEmail(string email)
+        {
+            List<string> result = new List<string>();
+            if (email.Contains('.') && email.Contains('@'))
+            {
+                result.Add("is @this.valid is a valid email address");
+                result.Add("green");
+                return result;
+            }
+            result.Add("not_valid_email.com is not a valid email address");
+            result.Add("red");
+            return result;
+
+        }
     }
 }
