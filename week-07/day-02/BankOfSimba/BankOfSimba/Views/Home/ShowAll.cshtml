@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "ShowAll";
+    int index = 1;
+}
+
+    <head>
+        <title>ShowAll</title>
+        <link rel="stylesheet" href="~/Styles.css" />
+    </head>
+
+<h2>ShowAll</h2>
+
+<head>
+    <title>Show</title>
+    <link rel="stylesheet" href="~/styles.css" />
+</head>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Balance</th>
+            <th>Animal Type</th>
+            <th>Status</th>
+            <th>Index</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+
+        @foreach (var account in ViewBag.Accounts)
+        {
+            <tr>
+                <td>@account.Name</td>
+                <td>@string.Format("{0:0.00}", account.Balance) @account.Currency</td>
+                <td>@account.AnimalType</td>
+                @if (account.Status.ToLower() == "king")
+                {
+                    <td class="shiny">@account.Status</td>
+                }
+                else
+                {
+                    <td>@account.Status</td>
+                }
+                <td>@(index++)</td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>
